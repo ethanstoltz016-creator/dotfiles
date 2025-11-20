@@ -30,10 +30,16 @@ set tabstop=4
 " Use space characters instead of tabs
 set expandtab
 
+#set status line to always be on
+set laststatus=2
 
-
-"set cursorline"
 "set cursorcolumn"
+set cursorcolumn
+highlight CursorColumn ctermbg=12 
+
+#set statusline=%F%m%r%h%w\ \ \ %l,%c%V\ \ %P
+set statusline=%F%m%r%h%w\ %l,%c\ %p%%\ of\ %L 
+hi StatusLine cterm=underline cterm=bold ctermbg=black ctermfg=grey
 
 set number
 set hlsearch
@@ -42,6 +48,9 @@ set incsearch
 set ignorecase
 set smartcase
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+
+map <C-F2> :set cursorcolumn!<Bar>
 
 :command PY :!python %
 set directory=c:\\\\Users\\\\RebelScum\\\\.vim\\\\swapfiles//
