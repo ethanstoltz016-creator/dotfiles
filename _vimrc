@@ -38,7 +38,7 @@ set cursorcolumn
 highlight CursorColumn ctermbg=12 
 
 #set statusline=%F%m%r%h%w\ \ \ %l,%c%V\ \ %P
-set statusline=%F%m%r%h%w\ %l,%c\ %p%%\ of\ %L 
+set statusline=%F%m%r%h%w\ %l,%c\ %B\ %p%%\ of\ %L\ 
 hi StatusLine cterm=underline cterm=bold ctermbg=black ctermfg=grey
 
 set number
@@ -50,7 +50,7 @@ set smartcase
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 
-map <C-F2> :set cursorcolumn!<Bar>
+map <silent> <F9> :set cursorcolumn! <CR>
 
 :command PY :!python %
 set directory=c:\\\\Users\\\\RebelScum\\\\.vim\\\\swapfiles//
