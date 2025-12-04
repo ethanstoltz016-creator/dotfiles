@@ -37,11 +37,6 @@ set laststatus=2
 set cursorcolumn
 highlight CursorColumn ctermbg=12 
 
-#set statusline=%F%m%r%h%w\ \ \ %l,%c%V\ \ %P
-set statusline=%F%m%r%h%w\ %l,%c\ %B\ %p%%\ of\ %L\ 
-hi StatusLine cterm=underline cterm=bold ctermbg=black ctermfg=grey
-
-set number
 set hlsearch
 set nowrap
 set incsearch
@@ -49,8 +44,14 @@ set ignorecase
 set smartcase
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
+#set statusline=%F%m%r%h%w\ \ \ %l,%c%V\ \ %P
+set statusline=%F%m%r%h%w\ %l,%c\ %B\ %p%%\ of\ %L\ 
+hi StatusLine cterm=underline cterm=bold ctermbg=black ctermfg=grey
 
 map <silent> <F9> :set cursorcolumn! <CR>
 
-:command PY :!python %
 set directory=c:\\\\Users\\\\RebelScum\\\\.vim\\\\swapfiles//
+
+
+:command PY :!python %
+:command W :w
